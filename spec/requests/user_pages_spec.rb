@@ -32,12 +32,6 @@ describe "User pages" do
         end
       end
 
-      it "should list the first page of users" do
-        first_page.each do |user|
-          page.should have_selector('li', text: user.name)
-        end
-      end
-
       it "should not list the second page of users" do
         second_page.each do |user|
           page.should_not have_selector('li', text: user.name)
