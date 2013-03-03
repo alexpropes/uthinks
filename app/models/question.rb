@@ -3,5 +3,6 @@ class Question < ActiveRecord::Base
   belongs_to :user
   
   validates :user_id, presence: true
+  
   default_scope order: 'questions.created_at DESC
 end
