@@ -4,5 +4,5 @@ class Question < ActiveRecord::Base
   
   validates :user_id, presence: true
   
-  default_scope order: 'questions.created_at DESC
+  default_scope order: 'questions.created_at DESC'
 end
