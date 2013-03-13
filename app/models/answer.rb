@@ -6,6 +6,7 @@ class Answer < ActiveRecord::Base
   
   validates :content, presence: true
   validates :user_id, presence: true
+  validates :question_id, presence: true
 
   
   default_scope order: 'microposts.created_at DESC'
