@@ -20,6 +20,7 @@ class QuestionsController < ApplicationController
 
   def show
     @question = Question.find(params[:id])
+	@answer = @question.answers.build if signed_in?
   end
   
   def destroy

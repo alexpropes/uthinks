@@ -1,10 +1,12 @@
-class Question < ActiveRecord::Base
+class Answer < ActiveRecord::Base
   attr_accessible :content
+  
   belongs_to :user
-  has_many :answers
+  belongs_to :question
   
   validates :content, presence: true
   validates :user_id, presence: true
+
   
-  default_scope order: 'questions.created_at DESC'
+  default_scope order: 'microposts.created_at DESC'
 end
