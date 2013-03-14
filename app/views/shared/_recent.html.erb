@@ -1,0 +1,6 @@
+<% if @recent_items.any? %>
+  <ol class="questions">
+    <%= render partial: 'shared/recent_item', collection: @recent_items %>
+  </ol>
+  <%= will_paginate @recent_items %>
+<% end %>

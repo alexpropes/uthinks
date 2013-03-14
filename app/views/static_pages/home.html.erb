@@ -1,5 +1,9 @@
 <% if signed_in? %>
 	<div class="row">
+		<div class="span8">
+			<h3>Recent Questions</h3>
+			<%= render 'shared/recent' %>
+		</div>
 		<aside class="span4">
 		  <section>
 			<%= render 'shared/user_info' %>

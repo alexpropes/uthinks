@@ -1,0 +1,9 @@
+<li id="<%= recent_item.id %>">
+  <span class="user">
+    <%= link_to recent_item.user.name, recent_item.user %>
+  </span>
+  <span class="content"><%= recent_item.content %></span>
+  <span class="timestamp">
+    Asked <%= time_ago_in_words(recent_item.created_at) %> ago.
+  </span>
+</li>
